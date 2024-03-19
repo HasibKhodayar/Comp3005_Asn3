@@ -6,7 +6,7 @@ public class Assign3Q1 {
     public Assign3Q1() {
         // JDBC & Database credentials
         String url = "jdbc:postgresql://localhost:5433/Asn3db";
-        String user = "Asn3db";
+        String user = "postgres";
         String password = "Hasib123";
         try {
             Class.forName("org.postgresql.Driver"); // Connect to the database
@@ -34,7 +34,7 @@ public class Assign3Q1 {
             while (rs.next()) {
                 int id = rs.getInt("student_id");
                 String first_name = rs.getString("first_name");
-                String last_name = rs.getString("first_name");
+                String last_name = rs.getString("last_name");
                 String email = rs.getString("email");
                 String enroll_date = rs.getString("enrollment_date");
                 System.out.println("Student ID: " + id + ", First Name: " + first_name +
